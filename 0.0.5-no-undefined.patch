@@ -1,0 +1,20 @@
+--- origsrc/libopenraw-0.0.5/gnome/Makefile.am	2008-02-24 16:03:29.000000000 -0600
++++ src/libopenraw-0.0.5/gnome/Makefile.am	2008-11-30 01:50:41.937500000 -0600
+@@ -16,6 +16,7 @@
+ lib_LTLIBRARIES = $(GNOME_TARGETS)
+ 
+ libopenrawgnome_la_LDFLAGS = \
++	-no-undefined \
+ 	-version-info @LIBOPENRAW_VERSION_INFO@
+ 
+ libopenrawgnome_la_LIBADD = ../lib/libopenraw.la \
+--- origsrc/libopenraw-0.0.5/lib/Makefile.am	2008-02-11 08:57:08.000000000 -0600
++++ src/libopenraw-0.0.5/lib/Makefile.am	2008-11-30 01:50:23.109375000 -0600
+@@ -40,6 +40,7 @@
+ lib_LTLIBRARIES = libopenraw.la
+ 
+ libopenraw_la_LDFLAGS = \
++	-no-undefined \
+ 	-version-info @LIBOPENRAW_VERSION_INFO@
+ 
+ #	-export-symbols $(srcdir)/libopenraw.sym 

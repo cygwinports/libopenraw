@@ -1,0 +1,25 @@
+--- origsrc/libopenraw-0.0.5/configure.in	2008-11-30 02:35:41.546875000 -0600
++++ src/libopenraw-0.0.5/configure.in	2008-11-30 02:43:14.328125000 -0600
+@@ -146,7 +146,7 @@
+ AX_CFLAGS_GCC_OPTION([-Wextra])
+ AX_CXXFLAGS_GCC_OPTION([-Wextra])
+ 
+-CXXFLAGS="$CXXFLAGS -ansi -pedantic -g -Wall -Wshadow"
++CXXFLAGS="$CXXFLAGS -pedantic -g -Wall -Wshadow"
+ CFLAGS="$CFLAGS -pedantic -g -Wall"
+ 
+ 
+--- origsrc/libopenraw-0.0.5/testsuite/Makefile.am	2008-01-26 19:40:12.000000000 -0600
++++ src/libopenraw-0.0.5/testsuite/Makefile.am	2008-11-30 02:20:33.000000000 -0600
+@@ -9,10 +9,9 @@
+ 	-I$(top_srcdir)/lib \
+ 	@LIBXML_CFLAGS@
+ 
+-noinst_PROGRAMS = testsuite
+ noinst_HEADERS = testsuitetags.h
+ 
+-check_PROGRAMS = test_xmlhandler
++check_PROGRAMS = test_xmlhandler testsuite
+ 
+ EXTRA_DIST = testsuitetags.pl testsuitetags.txt test.xml testsuite.xml
+ BUILT_SOURCES = $(srcdir)/testsuitetags.cpp $(srcdir)/testsuitetags.h
