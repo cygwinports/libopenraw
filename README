@@ -8,8 +8,8 @@ image processing application.
 
 Runtime requirements:
   cygwin-1.5.25-15
-  gdk-pixbuf2-2.12.12-1
-  glib2-2.16.6-1
+  libgdk_pixbuf2.0_0-2.14.7-2
+  libglib2.0_0-2.18.4-1
   libjpeg62-6b-12
 
 Build requirements:
@@ -17,14 +17,14 @@ Build requirements:
   autoconf2.5-2.63-1
   automake1.10-1.10.1-2
   binutils-20080624-2
-  cygport-0.4.2-1
+  cygport-0.4.3-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
   libboost-devel-1.37-1
   libtool-2.2.6a-1
-  libxml2-devel-2.6.32-2
-  make-3.81-1
+  libxml2-devel-2.7.3-1
+  make-3.81-2
   pkg-config-0.23a-2
   sed-4.1.5-2
 
@@ -37,18 +37,19 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libopenraw-0.0.5-X-src.tar.bz2
+  unpack libopenraw-0.0.6-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libopenraw-0.0.5-X.cygport all
+  cygport ./libopenraw-0.0.6-X.cygport all
 
 This will create:
-  /usr/src/libopenraw-0.0.5-X-src.tar.bz2
-  /usr/src/libopenraw-devel-0.0.5-X.tar.bz2
-  /usr/src/libopenraw1-0.0.5-X.tar.bz2
-  /usr/src/libopenrawgnome-devel-0.0.5-X.tar.bz2
-  /usr/src/libopenrawgnome1-0.0.5-X.tar.bz2
+  /usr/src/gdk-pixbuf2.0-openraw-0.0.6-X.tar.bz2
+  /usr/src/libopenraw-0.0.6-X-src.tar.bz2
+  /usr/src/libopenraw-devel-0.0.6-X.tar.bz2
+  /usr/src/libopenraw1-0.0.6-X.tar.bz2
+  /usr/src/libopenrawgnome-devel-0.0.6-X.tar.bz2
+  /usr/src/libopenrawgnome1-0.0.6-X.tar.bz2
 
 -------------------------------------------
 
@@ -56,16 +57,18 @@ Files included in the binary packages:
 
 (libopenraw1)
   /usr/bin/cygopenraw-1.dll
-  /usr/share/doc/libopenraw-0.0.5/AUTHORS
-  /usr/share/doc/libopenraw-0.0.5/COPYING
-  /usr/share/doc/libopenraw-0.0.5/ChangeLog
-  /usr/share/doc/libopenraw-0.0.5/NEWS
-  /usr/share/doc/libopenraw-0.0.5/README
-  /usr/share/doc/libopenraw-0.0.5/TODO
+  /usr/share/doc/libopenraw-0.0.6/AUTHORS
+  /usr/share/doc/libopenraw-0.0.6/COPYING
+  /usr/share/doc/libopenraw-0.0.6/ChangeLog
+  /usr/share/doc/libopenraw-0.0.6/NEWS
+  /usr/share/doc/libopenraw-0.0.6/README
+  /usr/share/doc/libopenraw-0.0.6/TODO
 
-(libopenraw-gnome)
+(libopenraw-devel)
+  /usr/include/libopenraw-1.0/libopenraw/bitmapdata.h
   /usr/include/libopenraw-1.0/libopenraw/consts.h
   /usr/include/libopenraw-1.0/libopenraw/debug.h
+  /usr/include/libopenraw-1.0/libopenraw/demosaic.h
   /usr/include/libopenraw-1.0/libopenraw/exif.h
   /usr/include/libopenraw-1.0/libopenraw/io.h
   /usr/include/libopenraw-1.0/libopenraw/libopenraw.h
@@ -89,9 +92,17 @@ Files included in the binary packages:
   /usr/lib/libopenrawgnome.la
   /usr/lib/pkgconfig/libopenraw-gnome-1.0.pc
 
+(gdk-pixbuf2.0-openraw)
+  /etc/postinstall/libopenraw.sh
+  /usr/lib/gtk-2.0/2.10.0/loaders/cygopenraw_pixbuf.dll
+  /usr/lib/gtk-2.0/2.10.0/loaders/libopenraw_pixbuf.la
+
 ------------------
 
 Port Notes:
+
+----- version 0.0.5-1 -----
+Version bump; added a GdkPixbuf loader.
 
 ----- version 0.0.5-1 -----
 Initial release for Cygwin.
