@@ -7,23 +7,25 @@ there is a need for an easy to use API to build free software digital
 image processing application.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  libgdk_pixbuf2.0_0-2.14.7-2
-  libglib2.0_0-2.18.4-1
-  libjpeg62-6b-12
+  cygwin-1.7.0-44
+  libgcc1-4.3.2-2
+  libgdk_pixbuf2.0_0-2.16.0-1
+  libglib2.0_0-2.20.0-1
+  libjpeg62-6b-20
+  libstdc++6-4.3.2-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-1
-  automake1.10-1.10.1-2
+  autoconf2.5-2.63-10
+  automake1.10-1.10.1-10
   binutils-20080624-2
-  cygport-0.4.3-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gcc-g++-3.4.4-3
-  libboost-devel-1.37-1
-  libtool-2.2.6a-1
-  libxml2-devel-2.7.3-1
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gcc4-g++-4.3.2-2
+  libboost-devel-1.38.0-1
+  libtool-2.2.7a-12
+  libxml2-devel-2.7.3-10
   make-3.81-2
   pkg-config-0.23a-2
   sed-4.1.5-2
@@ -57,12 +59,12 @@ Files included in the binary packages:
 
 (libopenraw1)
   /usr/bin/cygopenraw-1.dll
-  /usr/share/doc/libopenraw-0.0.6/AUTHORS
-  /usr/share/doc/libopenraw-0.0.6/COPYING
-  /usr/share/doc/libopenraw-0.0.6/ChangeLog
-  /usr/share/doc/libopenraw-0.0.6/NEWS
-  /usr/share/doc/libopenraw-0.0.6/README
-  /usr/share/doc/libopenraw-0.0.6/TODO
+  /usr/share/doc/libopenraw/AUTHORS
+  /usr/share/doc/libopenraw/COPYING
+  /usr/share/doc/libopenraw/ChangeLog
+  /usr/share/doc/libopenraw/NEWS
+  /usr/share/doc/libopenraw/README
+  /usr/share/doc/libopenraw/TODO
 
 (libopenraw-devel)
   /usr/include/libopenraw-1.0/libopenraw/bitmapdata.h
@@ -101,11 +103,8 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 0.0.5-1 -----
-Version bump; added a GdkPixbuf loader.
-
------ version 0.0.5-1 -----
-Initial release for Cygwin.
+----- version 0.0.6-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

@@ -1,5 +1,5 @@
 category: Graphics
-requires: cygwin libjpeg-devel libopenraw1
+requires: cygwin libjpeg-devel libopenraw1 libstdc++6-devel
 external-source: libopenraw
 sdesc: "RAW graphics library (development)"
 ldesc: "libopenraw is an ongoing project to provide a free software
