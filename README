@@ -7,27 +7,27 @@ there is a need for an easy to use API to build free software digital
 image processing application.
 
 Runtime requirements:
-  cygwin-1.7.0-44
+  cygwin-1.7.0-61
   libgcc1-4.3.2-2
-  libgdk_pixbuf2.0_0-2.16.0-1
-  libglib2.0_0-2.20.0-1
-  libjpeg62-6b-20
+  libgdk_pixbuf2.0_0-2.16.6-1
+  libglib2.0_0-2.20.5-1
+  libjpeg7-7-10
   libstdc++6-4.3.2-2
 
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.63-10
-  automake1.10-1.10.1-10
-  binutils-20080624-2
-  cygport-0.9.6-1
-  gawk-3.1.6-2
+  automake1.10-1.10.2-10
+  binutils-2.19.51-1
+  cygport-0.9.9-1
+  gawk-3.1.7-1
   gcc4-core-4.3.2-2
   gcc4-g++-4.3.2-2
-  libboost-devel-1.38.0-1
-  libtool-2.2.7a-12
-  libxml2-devel-2.7.3-10
+  libboost-devel-1.40.0-1
+  libtool-2.2.7a-14
+  libxml2-devel-2.7.3-11
   make-3.81-2
-  pkg-config-0.23a-2
+  pkg-config-0.23b-10
   sed-4.1.5-2
 
 Canonical website:
@@ -39,19 +39,19 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libopenraw-0.0.6-X-src.tar.bz2
+  unpack libopenraw-0.0.8-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libopenraw-0.0.6-X.cygport all
+  cygport ./libopenraw-0.0.8-X.cygport all
 
 This will create:
-  /usr/src/gdk-pixbuf2.0-openraw-0.0.6-X.tar.bz2
-  /usr/src/libopenraw-0.0.6-X-src.tar.bz2
-  /usr/src/libopenraw-devel-0.0.6-X.tar.bz2
-  /usr/src/libopenraw1-0.0.6-X.tar.bz2
-  /usr/src/libopenrawgnome-devel-0.0.6-X.tar.bz2
-  /usr/src/libopenrawgnome1-0.0.6-X.tar.bz2
+  /usr/src/gdk-pixbuf2.0-openraw-0.0.8-X.tar.bz2
+  /usr/src/libopenraw-0.0.8-X-src.tar.bz2
+  /usr/src/libopenraw-devel-0.0.8-X.tar.bz2
+  /usr/src/libopenraw1-0.0.8-X.tar.bz2
+  /usr/src/libopenrawgnome-devel-0.0.8-X.tar.bz2
+  /usr/src/libopenrawgnome1-0.0.8-X.tar.bz2
 
 -------------------------------------------
 
@@ -102,6 +102,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 0.0.8-1 -----
+Version bump.
 
 ----- version 0.0.6-10 -----
 Initial release for Cygwin 1.7.
