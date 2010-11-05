@@ -16,4 +16,6 @@ libopenrawgnome1_CONTENTS="usr/bin/cygopenrawgnome-1.dll"
 libopenrawgnome_devel_CONTENTS="usr/include/libopenraw-1.0/libopenraw-gnome/
                                 usr/lib/libopenrawgnome.*
                                 usr/lib/pkgconfig/libopenraw-gnome-1.0.pc"
-gdk_pixbuf2_0_openraw_CONTENTS="etc/postinstall/ usr/lib/gtk-2.0/2.10.0/loaders/"
+gdk_pixbuf2_0_openraw_CONTENTS="etc/postinstall/ usr/lib/gdk-pixbuf-2.0/"
+
+MAKEOPTS+=" loaderdir=$(pkg-config --variable=gdk_pixbuf_moduledir gdk-pixbuf-2.0)"
