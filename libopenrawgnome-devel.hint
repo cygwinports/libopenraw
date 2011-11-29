@@ -1,5 +1,5 @@
 category: Graphics
-requires: libglib2.0-devel libgdk_pixbuf2.0-devel libopenraw-devel libopenrawgnome1 libstdc++6-devel
+requires: libglib2.0-devel libgdk_pixbuf2.0-devel libopenraw-devel libopenrawgnome1
 external-source: libopenraw
 sdesc: "RAW graphics library (GdkPixbuf libdevel)"
 ldesc: "libopenraw is an ongoing project to provide a free software

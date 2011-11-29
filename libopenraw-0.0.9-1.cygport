@@ -1,13 +1,13 @@
 DESCRIPTION="RAW graphics library"
 HOMEPAGE="http://libopenraw.freedesktop.org/"
-SRC_URI="http://libopenraw.freedesktop.org/download/${P}.tar.gz"
+SRC_URI="http://libopenraw.freedesktop.org/download/${P}.tar.bz2"
 PATCH_URI="
 	mirror://portage/media-libs/${PN}/files/${PN}-0.0.5-ljpegdcompressor.patch
 	0.0.5-no-undefined.patch
 	0.0.5-testsuite.patch
 "
 
-PKG_NAMES="${PN} ${PN}1 ${PN}-devel ${PN}gnome1 ${PN}gnome-devel gdk-pixbuf2.0-openraw"
+PKG_NAMES="${PN}1 ${PN}-devel ${PN}gnome1 ${PN}gnome-devel gdk-pixbuf2.0-openraw"
 libopenraw1_CONTENTS="usr/bin/cygopenraw-1.dll usr/share/doc/"
 libopenraw_devel_CONTENTS="usr/include/libopenraw-1.0/libopenraw/
                            usr/lib/libopenraw.*
@@ -17,5 +17,3 @@ libopenrawgnome_devel_CONTENTS="usr/include/libopenraw-1.0/libopenraw-gnome/
                                 usr/lib/libopenrawgnome.*
                                 usr/lib/pkgconfig/libopenraw-gnome-1.0.pc"
 gdk_pixbuf2_0_openraw_CONTENTS="etc/postinstall/ usr/lib/gdk-pixbuf-2.0/"
-
-MAKEOPTS+=" loaderdir=$(pkg-config --variable=gdk_pixbuf_moduledir gdk-pixbuf-2.0)"
