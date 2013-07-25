@@ -1,9 +1,0 @@
-category: Graphics Gnome
-requires: libglib2.0_0 libgdk_pixbuf2.0_0 libopenraw1
-external-source: libopenraw
-sdesc: "GdkPixbuf RAW graphics loader"
-ldesc: "libopenraw is an ongoing project to provide a free software
-implementation for camera RAW files decoding. One of the main reason is
-that dcraw is not suited for easy integration into applications, and
-there is a need for an easy to use API to build free software digital
-image processing application."

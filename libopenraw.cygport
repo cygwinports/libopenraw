@@ -1,0 +1,31 @@
+NAME="libopenraw"
+VERSION=0.0.9
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="RAW graphics library"
+DESCRIPTION="libopenraw is an ongoing project to provide a free software
+implementation for camera RAW files decoding. One of the main reason is
+that dcraw is not suited for easy integration into applications, and
+there is a need for an easy to use API to build free software digital
+image processing application."
+HOMEPAGE="http://libopenraw.freedesktop.org/"
+SRC_URI="http://libopenraw.freedesktop.org/download/${NAME}-${VERSION}.tar.bz2"
+PATCH_URI="
+	mirror://portage/media-libs/${NAME}/files/${NAME}-0.0.5-ljpegdcompressor.patch
+	0.0.5-no-undefined.patch
+	0.0.5-testsuite.patch
+"
+
+PKG_NAMES="${NAME}1 ${NAME}-devel ${NAME}gnome1 ${NAME}gnome-devel gdk-pixbuf2.0-openraw"
+libopenraw1_CONTENTS="usr/bin/cygopenraw-1.dll usr/share/doc/"
+libopenraw_devel_CONTENTS="usr/include/libopenraw-1.0/libopenraw/
+                           usr/lib/libopenraw.*
+                           usr/lib/pkgconfig/libopenraw-1.0.pc"
+libopenrawgnome1_SUMMARY="GdkPixbuf ${SUMMARY}"
+libopenrawgnome1_CONTENTS="usr/bin/cygopenrawgnome-1.dll"
+libopenrawgnome_devel_SUMMARY="GdkPixbuf ${SUMMARY}"
+libopenrawgnome_devel_CONTENTS="usr/include/libopenraw-1.0/libopenraw-gnome/
+                                usr/lib/libopenrawgnome.*
+                                usr/lib/pkgconfig/libopenraw-gnome-1.0.pc"
+gdk_pixbuf2_0_openraw_SUMMARY="GdkPixbuf RAW image loader"
+gdk_pixbuf2_0_openraw_CONTENTS="etc/postinstall/ usr/lib/gdk-pixbuf-2.0/"
