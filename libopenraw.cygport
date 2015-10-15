@@ -1,6 +1,6 @@
 NAME="libopenraw"
 VERSION=0.0.9
-RELEASE=2
+RELEASE=3
 CATEGORY="Libs"
 SUMMARY="RAW graphics library"
 DESCRIPTION="libopenraw is an ongoing project to provide a free software
