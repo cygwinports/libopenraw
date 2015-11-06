@@ -1,6 +1,6 @@
 NAME="libopenraw"
 VERSION=0.0.9
-RELEASE=3
+RELEASE=4
 CATEGORY="Libs"
 SUMMARY="RAW graphics library"
 DESCRIPTION="libopenraw is an ongoing project to provide a free software
@@ -13,6 +13,7 @@ SRC_URI="http://libopenraw.freedesktop.org/download/${NAME}-${VERSION}.tar.bz2"
 PATCH_URI="
 	0.0.5-no-undefined.patch
 	0.0.5-testsuite.patch
+	0.0.9-gdk-pixbuf-loader.patch
 "
 
 PKG_NAMES="${NAME}1 ${NAME}-devel ${NAME}gnome1 ${NAME}gnome-devel gdk-pixbuf2.0-openraw"

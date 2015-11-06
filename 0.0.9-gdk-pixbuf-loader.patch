@@ -1,0 +1,31 @@
+gdk_pixbuf_loader_close states:
+
+"If %FALSE is returned, @error will be set to an error from the
+#GDK_PIXBUF_ERROR or #G_FILE_ERROR domains."
+
+Failure to comply with this assumption causes a NULL references in
+gnome-desktop's _gdk_pixbuf_new_from_uri_at_scale with gdk-pixbuf2.0-openraw
+installed.
+
+--- origsrc/libopenraw-0.0.9/gnome/pixbuf-loader.c	2011-11-13 01:00:09.000000000 -0600
++++ src/libopenraw-0.0.9/gnome/pixbuf-loader.c	2015-11-06 15:47:05.679093400 -0600
+@@ -98,7 +98,6 @@ gdk_pixbuf__or_image_stop_load (gpointer
+ 	
+     GdkPixbuf *pixbuf = NULL;
+     ORRawFileRef raw_file = NULL;
+-    (void)error;
+ 
+     raw_file = or_rawfile_new_from_memory(context->data->data, context->data->len,
+                                           OR_DATA_TYPE_NONE);
+@@ -129,6 +128,11 @@ gdk_pixbuf__or_image_stop_load (gpointer
+                                       context->user_data);
+         }
+         result = TRUE;
++    } else if (error) {
++        g_set_error (error,
++                     GDK_PIXBUF_ERROR,
++                     GDK_PIXBUF_ERROR_FAILED,
++                     "Unable to load RAW file");
+     }
+ 
+ 
