@@ -1,6 +1,6 @@
 NAME="libopenraw"
-VERSION=0.0.9
-RELEASE=4
+VERSION=0.1.2
+RELEASE=1
 CATEGORY="Libs"
 SUMMARY="RAW graphics library"
 DESCRIPTION="libopenraw is an ongoing project to provide a free software
@@ -12,20 +12,26 @@ HOMEPAGE="http://libopenraw.freedesktop.org/"
 SRC_URI="http://libopenraw.freedesktop.org/download/${NAME}-${VERSION}.tar.bz2"
 PATCH_URI="
 	0.0.5-no-undefined.patch
-	0.0.5-testsuite.patch
-	0.0.9-gdk-pixbuf-loader.patch
+	0.1.2-ftm.patch
 "
 
-PKG_NAMES="${NAME}1 ${NAME}-devel ${NAME}gnome1 ${NAME}gnome-devel gdk-pixbuf2.0-openraw"
-libopenraw1_CONTENTS="usr/bin/cygopenraw-1.dll usr/share/doc/"
-libopenraw_devel_CONTENTS="usr/include/libopenraw-1.0/libopenraw/
-                           usr/lib/libopenraw.*
-                           usr/lib/pkgconfig/libopenraw-1.0.pc"
-libopenrawgnome1_SUMMARY="GdkPixbuf ${SUMMARY}"
-libopenrawgnome1_CONTENTS="usr/bin/cygopenrawgnome-1.dll"
+PKG_NAMES="${NAME}7 ${NAME}-devel ${NAME}gnome7 ${NAME}gnome-devel gdk-pixbuf2.0-openraw"
+libopenraw7_CONTENTS="usr/bin/cygopenraw-7.dll usr/share/doc/"
+libopenraw_devel_CONTENTS="
+	usr/include/libopenraw-0.1/libopenraw/
+	usr/lib/libopenraw.dll.a
+	usr/lib/pkgconfig/libopenraw-0.1.pc
+"
+libopenrawgnome7_SUMMARY="GdkPixbuf ${SUMMARY}"
+libopenrawgnome7_CONTENTS="usr/bin/cygopenrawgnome-7.dll"
 libopenrawgnome_devel_SUMMARY="GdkPixbuf ${SUMMARY}"
-libopenrawgnome_devel_CONTENTS="usr/include/libopenraw-1.0/libopenraw-gnome/
-                                usr/lib/libopenrawgnome.*
-                                usr/lib/pkgconfig/libopenraw-gnome-1.0.pc"
+libopenrawgnome_devel_CONTENTS="
+	usr/include/libopenraw-0.1/libopenraw-gnome/
+	usr/lib/libopenrawgnome.dll.a
+	usr/lib/pkgconfig/libopenraw-gnome-0.1.pc
+"
 gdk_pixbuf2_0_openraw_SUMMARY="GdkPixbuf RAW image loader"
-gdk_pixbuf2_0_openraw_CONTENTS="etc/postinstall/ usr/lib/gdk-pixbuf-2.0/"
+gdk_pixbuf2_0_openraw_CONTENTS="
+	etc/postinstall/
+	usr/lib/gdk-pixbuf-2.0/
+"

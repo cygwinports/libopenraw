@@ -1,0 +1,21 @@
+--- origsrc/libopenraw-0.1.2/configure.ac	2017-03-19 14:02:40.000000000 -0500
++++ src/libopenraw-0.1.2/configure.ac	2017-05-04 01:08:33.716079300 -0500
+@@ -72,7 +72,7 @@ AC_PROG_CPP
+ AC_PROG_CXX
+ AC_PROG_INSTALL
+ AC_PROG_LIBTOOL
+-AX_CXX_COMPILE_STDCXX_11(noext,mandatory)
++AX_CXX_COMPILE_STDCXX_11(ext,mandatory)
+ 
+ dnl Requirements
+ EXEMPI_REQUIRED=1.99.5
+--- origsrc/libopenraw-0.1.2/testsuite/testsuite.cpp	2017-03-24 20:53:15.000000000 -0500
++++ src/libopenraw-0.1.2/testsuite/testsuite.cpp	2017-05-04 01:29:28.767747100 -0500
+@@ -20,6 +20,7 @@
+  */
+ 
+ 
++#define _GNU_SOURCE	/* get_current_dir_name */
+ #ifdef HAVE_CONFIG_H
+ #include "config.h"
+ #endif
